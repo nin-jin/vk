@@ -8,9 +8,7 @@ namespace $ {
 			direction: 'column',
 		},
 
-		border: {
-			radius: rem(.5),
-		},
+		borderRadius: '.5rem',
 
 		box: {
 			shadow: [{

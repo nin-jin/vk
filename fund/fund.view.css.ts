@@ -30,21 +30,15 @@ namespace $ {
 		},
 
 		$mol_string: {
-			border: {
-				radius: rem(.5),
-			},
+			borderRadius: '.5rem',
 		},
 
 		$mol_link: {
-			border: {
-				radius: rem(.5),
-			},
+			borderRadius: '.5rem',
 		},
 
 		$mol_button: {
-			border: {
-				radius: rem(.5),
-			},
+			borderRadius: '.5rem',
 		},
 
 		Rise_list_hint: {
