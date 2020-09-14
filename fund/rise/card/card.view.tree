@@ -18,7 +18,7 @@ $vk_fund_rise_card $mol_view
 				<= Stat $mol_list
 					sub /
 						<= Progress_text $mol_view
-							sub / <= progress_text \Funded {achieved} from {amount}
+							sub / <= progress_text @ \Funded {achieved} from {amount}
 						<= Progress_portion $mol_portion
 							portion <= portion 0
 				<= Support $mol_button_major

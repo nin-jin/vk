@@ -1,5 +1,5 @@
 $vk_fund_rise_edit $mol_page
-	title \Make a fund
+	title @ \Make a fund
 	store $vk_fund_rise
 	tools /
 		<= Close $mol_link
@@ -42,10 +42,10 @@ $vk_fund_rise_edit $mol_page
 						value?val <=> period?val \
 						options <= periods *
 							\
-								\One time
-							P7DT \Week
-							P1MT \Month
-							P3MT \Quarter
+								@ \One time
+							P7DT @ \Week
+							P1MT @ \Month
+							P3MT @ \Quarter
 				<= Payment_block $mol_form_field
 					name @ \Payment target
 					bid <= payment_bid \
