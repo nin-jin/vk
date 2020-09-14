@@ -51,11 +51,11 @@ namespace $ {
 			return str ? new $mol_time_duration( str ) : ''
 		}
 
-		amount( next? : number | null ) {
+		amount( next? : number ) {
 			return this.value( 'amount' , next )
 		}
 
-		achieved( next? : number | null ) {
+		achieved( next? : number ) {
 			return this.value( 'achieved' , next )
 		}
 
