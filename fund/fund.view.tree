@@ -1,0 +1,38 @@
+$vk_fund $mol_book2
+	store $vk_fund_store / *
+		rises /
+	payments *
+		vk_pay \VK Pay
+		wuqywu \Card *1234
+	signs *
+		\
+			\Дмитрий К
+		id1 \Павел Дуров
+	plugins /
+		<= Theme $mol_theme_auto
+	pages /
+		<= List_page $mol_page
+			title @ \Fund rising
+			tools /
+				<= Sources $mol_link_source
+					uri \https://github.com/nin-jin/vk_fund
+				<= Lights $mol_lights_toggle
+				<= Add $mol_link
+					arg * rise <= rise_new_id \
+					hint @ \Add new fund
+					sub /
+						<= Add_icon $mol_icon_plus
+			body /
+				<= Rise_list $mol_list
+					rows <= rise_list /
+					Empty <= Rise_list_hint $mol_view
+						sub /
+							<= rise_list_hint @ \Add new fund rise
+							<= Rise_list_add_icon $mol_icon_arrow_up_bold
+	Rise_row!id $vk_fund_rise_card
+		store <= rise!id $vk_fund_rise
+		arg <= rise_arg!id *
+	Edit_page!id $vk_fund_rise_edit
+		payments <= payments
+		authors <= signs
+		store <= rise!id $vk_fund_rise

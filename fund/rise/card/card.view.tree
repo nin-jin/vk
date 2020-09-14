@@ -1,0 +1,25 @@
+$vk_fund_rise_card $mol_view
+	store $vk_fund_rise
+	sub /
+		<= Link $mol_link
+			arg <= arg *
+			sub /
+				<= Image $mol_image
+					title \
+					uri <= image \
+				<= Main $mol_list
+					rows /
+						<= Title $mol_view
+							sub / <= title
+						<= Aim $mol_view
+							sub / <= aim /
+		<= Addon $mol_row
+			sub /
+				<= Stat $mol_list
+					sub /
+						<= Progress_text $mol_view
+							sub / <= progress_text \Funded {achieved} from {amount}
+						<= Progress_portion $mol_portion
+							portion <= portion 0
+				<= Support $mol_button_major
+					title @ \Support

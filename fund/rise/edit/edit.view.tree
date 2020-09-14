@@ -1,0 +1,65 @@
+$vk_fund_rise_edit $mol_page
+	title \Make a fund
+	store $vk_fund_rise
+	tools /
+		<= Close $mol_link
+			arg * rise null
+			sub /
+				<= Close_icon $mol_icon_cross
+	bid_required @ \Required
+	body /
+		<= Image $vk_image_pick
+			value?val <=> image?val \
+		<= Form $mol_form
+			submit_blocked => submit_blocked
+			form_fields /
+				<= Name_block $mol_form_field
+					name @ \Title
+					bid <= name_bid \
+					Content <= Name $mol_string
+						value?val <=> name?val \
+				<= Amount_block $mol_form_field
+					name @ \Amount
+					bid <= amount_bid \
+					Content <= Amount $mol_number
+						value?val <=> amount?val 0
+				<= Aim_block $mol_form_field
+					name @ \Aim
+					bid <= aim_bid \
+					Content <= Aim $mol_string
+						value?val <=> aim?val \
+				<= Description_block $mol_form_field
+					name @ \Description
+					Content <= Description $mol_textarea
+						value?val <=> description?val \
+				<= Deadline_block $mol_form_field
+					name @ \Deadline
+					Content <= Deadline $mol_date
+						value_moment?val <=> deadline?val $mol_time_moment
+				<= Period_block $mol_form_field
+					name @ \Period
+					Content <= Period $mol_switch
+						value?val <=> period?val \
+						options <= periods *
+							\
+								\One time
+							P7DT \Week
+							P1MT \Month
+							P3MT \Quarter
+				<= Payment_block $mol_form_field
+					name @ \Payment target
+					bid <= payment_bid \
+					Content <= Payment $mol_switch
+						value?val <=> payment?val \
+						options <= payments *
+				<= Author_block $mol_form_field
+					name @ \Author
+					bid <= author_bid \
+					Content <= Author $mol_switch
+						value?val <=> author?val \
+						options <= authors *
+			buttons /
+				<= Submit $mol_button_major
+					title @ \Publish fund rise
+					disabled <= submit_blocked
+					click?event <=> submit?event null
