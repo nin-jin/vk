@@ -82,7 +82,8 @@ namespace $.$$ {
 				deadline : this.deadline()?.toString() ?? null,
 			})
 			
-			this.Close().dom_node().click()
+			const button = this.Close().dom_node() as HTMLElement
+			button.click()
 
 		}
 

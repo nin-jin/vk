@@ -12,7 +12,7 @@ $vk_fund_rise_card $mol_view
 						<= Title $mol_view
 							sub / <= title
 						<= Aim $mol_view
-							sub / <= aim /
+							sub / <= aim \
 		<= Addon $mol_row
 			sub /
 				<= Stat $mol_list

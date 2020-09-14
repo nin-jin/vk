@@ -17,8 +17,8 @@ namespace $.$$ {
 		progress_text() {
 			const store = this.store()
 			return super.progress_text()
-				.replace( '{achieved}' , store.achieved() )
-				.replace( '{amount}' , store.amount() )
+				.replace( '{achieved}' , store.achieved().toString() )
+				.replace( '{amount}' , store.amount().toString() )
 		}
 
 		portion() {
