@@ -738,7 +738,7 @@ $vk_fund $mol_book2
 			title @ \Fund rising
 			tools /
 				<= Sources $mol_link_source
-					uri \https://github.com/nin-jin/vk_fund
+					uri \https://github.com/nin-jin/vk
 				<= Lights $mol_lights_toggle
 				<= Add $mol_link
 					arg * rise <= rise_new_id \

@@ -10004,7 +10004,7 @@ var $;
         }
         Sources() {
             const obj = new this.$.$mol_link_source();
-            obj.uri = () => "https://github.com/nin-jin/vk_fund";
+            obj.uri = () => "https://github.com/nin-jin/vk";
             return obj;
         }
         Lights() {
