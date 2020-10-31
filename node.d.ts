@@ -1928,27 +1928,6 @@ declare namespace $.$$ {
 }
 
 declare namespace $ {
-    class $mol_tiler extends $mol_view {
-        sub(): readonly $mol_view[];
-        items(): readonly $mol_view[];
-    }
-}
-
-declare namespace $ {
-}
-
-declare namespace $.$$ {
-    class $mol_tiler extends $.$mol_tiler {
-        sub(): $mol_view[];
-        groupItems(path: number[]): readonly $mol_view[];
-        groupChilds(path: number[]): $mol_view[];
-        child(path: number[]): $mol_view;
-        group(path: number[]): $mol_view;
-        item(path: number[]): $mol_view;
-    }
-}
-
-declare namespace $ {
     class $mol_button_minor extends $mol_button_typed {
     }
 }
@@ -1964,7 +1943,7 @@ declare namespace $ {
 
 declare namespace $ {
     class $mol_attach extends $mol_card {
-        Content(): $$.$mol_tiler;
+        Content(): $mol_view;
         items(val?: any): any;
         Add(): $$.$mol_attach_add;
         Item(id: any): $$.$mol_attach_item;
